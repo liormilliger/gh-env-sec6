@@ -11,8 +11,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.some.lie.mongodb.net
-      MONGODB_USERNAME: liormilliger
-      MONGODB_PASSWORD: somePassword
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }} # Secrets on the repoeitory level stored on my github account
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 3000
     # environment: testing
     runs-on: ubuntu-latest
